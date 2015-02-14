@@ -21,13 +21,17 @@ module ModuleDefinition{
         get settings(): Settings {
             return this._settings;
         }
-        
+
         get location(): SGLocation {
             return this._sgLocation;
         }
 
         get storage(): LocalStorage {
             return this._storage;
+        }
+
+        get debug(): boolean {
+            return this._debug;
         }
 
         log = (msg: string) => {

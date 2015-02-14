@@ -98,7 +98,9 @@ module ModuleDefinition {
         shouldRun = (location) => true;
 
         isModuleEnabled = (module: string) => {
-            return SGPP.storage.getItem(module) == "1";
+            var moduleEnabled = SGPP.storage.getItem(module) == "1";
+            SGPP.log("Settings.ts - " + module + " is " + (moduleEnabled ? "enabled" : "disabled") + ".");
+            return moduleEnabled;
         }
 
      

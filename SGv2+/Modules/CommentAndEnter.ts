@@ -17,7 +17,7 @@ module ModuleDefinition{
         }
 
         render = () => {
-        	var submit = $('.js__submit-form');
+            var submit = $('.js__submit-form');
             submit.before('<div class="sidebar__entry-insert comment_submit is-hidden">Comment and Enter</div>');
             submit.before('<div class="sidebar__entry-loading is-disabled is-hidden comment_submit"><i class="fa fa-refresh fa-spin"></i> Please wait...</div>');
             var insert = $('.sidebar .sidebar__entry-insert');

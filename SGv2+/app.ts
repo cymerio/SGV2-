@@ -1,5 +1,6 @@
 ﻿/// <reference path="Scripts/typings/jquery/jquery.d.ts" />
-/// <reference path="Scripts/typings/jquery/jquery_bpopup.d.ts" />
+/// <reference path="Scripts/typings/bpopup/jquery_bpopup.d.ts" />
+/// <reference path="scripts/typings/spectrum/spectrum.d.ts" />
                                                     
 
 /// <reference path="Core.ts" />
@@ -13,6 +14,7 @@
 /// <reference path="Modules/LivePreview.ts" />
 /// <reference path="Modules/ScrollingSidebar.ts" />
 /// <reference path="Modules/Settings.ts" />
+/// <reference path="modules/UserTaggingUser.ts" />
 /// <reference path="Modules/MarkComments.ts" />
 
 /// <reference path="Modules/EndlessScroll/EndlessScrollDiscussion.ts" />
@@ -36,7 +38,8 @@ var modulesNames: Array<string> = new Array<string>(
     "EndlessScrollDiscussionReplies",
     "EndlessScrollGiveaways",
     "EndlessScrollMyGiveaways",
-    "EndlessScrollGiveawayComments"
+    "EndlessScrollGiveawayComments",
+    "UserTaggingUser"
 );
 
 (function ($) {
@@ -55,11 +58,11 @@ var modulesNames: Array<string> = new Array<string>(
     //load modules
     for (var module in SGPP.modules) {
         //append stylesheet for each module
-        SGPP.log("Module " + m.name() + " append css.");
+        SGPP.log("Module " + SGPP.modules[module].name() + " append css.");
         SGPP.appendCSS(SGPP.modules[module].style);
 
         //init each module
-        SGPP.log("Module " + m.name() + " init() call.");
+        SGPP.log("Module " + SGPP.modules[module].name() + " init() call.");
         SGPP.modules[module].init();
     }
 

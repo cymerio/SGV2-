@@ -8,6 +8,7 @@
 // @run-at          document-start
 // @require         http://code.jquery.com/jquery-2.1.3.min.js
 // @require         https://raw.githubusercontent.com/dinbror/bpopup/master/jquery.bpopup.min.js
+// @require         https://raw.githubusercontent.com/bgrins/spectrum/master/spectrum.js
 // @grant           none
 // ==/UserScript==
 

@@ -13,5 +13,11 @@ all:
 	cat Monkeyheader.js >> $(OUTPUT)
 	cat temp2.js >> $(OUTPUT)
 	rm -f temp2.js
+debug:
+	tsc --target ES5 --noImplicitAny --out temp.js $(INPUT)
+	rm -f $(OUTPUT)
+	cat Monkeyheader.js >> $(OUTPUT)
+	cat temp.js >> $(OUTPUT)
+	rm -f temp.js
 clean:
 	rm -f $(OUTPUT) temp.js temp2.js
